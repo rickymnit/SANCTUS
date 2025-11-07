@@ -1,0 +1,46 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000; /* Black background */
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #444; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b; /* amber-500 */
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-shadow-amber {
+    text-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+@font-face {
+    font-family: 'Neon Rave'; /* This is the name WE give it for the CSS */
+    
+    src: url('NeonRave.woff2') format('woff2'), /* Preferred - if you converted it */
+         url('./fonts/Neon\ Rave.ttf') format('truetype'); /* Fallback - use the exact name from the zip */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.font-rave {
+    font-family: 'Neon Rave', sans-serif;
+}
