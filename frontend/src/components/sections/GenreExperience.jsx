@@ -8,7 +8,7 @@ const genres = [
     tagline: 'Feel the Breakbeat Energy',
     description: 'High-energy breaks and deep basslines that drive the dancefloor into a frenzy. From liquid smoothness to neurofunk aggression.',
     color: '#00d4ff',
-    image: '/assets/onedeck.jpeg',
+    image: '/assets/bg-drum-bass.jpeg',
   },
   {
     id: 'house',
@@ -16,7 +16,7 @@ const genres = [
     tagline: 'Where the Groove Never Stops',
     description: 'Four-on-the-floor grooves with soulful melodies and infectious rhythms. The foundation of dance music culture.',
     color: '#8b5cf6',
-    image: '/assets/1.jpeg',
+    image: '/assets/bg-house.jpeg',
   },
   {
     id: 'afro',
@@ -24,7 +24,7 @@ const genres = [
     tagline: 'Rhythms from the Motherland',
     description: 'Infectious African rhythms blended with modern electronic production. A celebration of roots and future.',
     color: '#a3e635',
-    image: '/assets/2.jpeg',
+    image: '/assets/bg-afro.jpeg',
   },
   {
     id: 'trance',
@@ -32,7 +32,7 @@ const genres = [
     tagline: 'Lose Yourself in the Sound',
     description: 'Euphoric melodies and driving beats that take you on a journey. Emotional peaks and transcendent moments.',
     color: '#ec4899',
-    image: '/assets/3.jpeg',
+    image: '/assets/bg-trance.jpeg',
   },
   {
     id: 'techno',
@@ -40,7 +40,7 @@ const genres = [
     tagline: 'The Pulse of the Underground',
     description: 'Raw, industrial, and hypnotic beats for the true heads. Dark rooms, strobe lights, and endless dancing.',
     color: '#f97316',
-    image: '/assets/4.jpeg',
+    image: '/assets/bg-techno.jpeg',
   },
 ];
 
@@ -50,7 +50,7 @@ const GenrePanel = ({ genre, index }) => {
     target: panelRef,
     offset: ['start end', 'end start'],
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
@@ -76,7 +76,7 @@ const GenrePanel = ({ genre, index }) => {
           }}
         />
         {/* Overlay */}
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             background: `linear-gradient(135deg, ${genre.color}20 0%, transparent 50%, #0a0a0a 100%)`,

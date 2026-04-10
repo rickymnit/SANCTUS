@@ -26,10 +26,10 @@ const LiveEnergy = () => {
         console.error('Failed to fetch gallery:', error);
         // Fallback data
         setImages([
-          { id: '1', url: '/assets/1.jpeg', category: 'live-shows', title: 'Live Performance' },
-          { id: '2', url: '/assets/2.jpeg', category: 'crowd', title: 'Crowd Energy' },
-          { id: '3', url: '/assets/3.jpeg', category: 'studio', title: 'Studio Session' },
-          { id: '4', url: '/assets/4.jpeg', category: 'live-shows', title: 'Event Night' },
+          { id: '1', url: '/assets/profile.jpeg', category: 'live-shows', title: 'Live Performance' },
+          { id: '2', url: '/assets/roomSaturation.jpeg', category: 'crowd', title: 'Crowd Energy' },
+          { id: '3', url: '/assets/Jalmahal.jpeg', category: 'studio', title: 'Studio Session' },
+          { id: '4', url: '/assets/Balcony.jpeg', category: 'live-shows', title: 'Jal Mahal Night' },
         ]);
       } finally {
         setLoading(false);
@@ -93,7 +93,7 @@ const LiveEnergy = () => {
         </motion.div>
 
         {/* Gallery grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
           layout
         >
@@ -115,7 +115,7 @@ const LiveEnergy = () => {
                     alt={image.title}
                     className="w-full h-full object-cover rounded-3xl transition-transform duration-500 group-hover:scale-110"
                   />
-                  
+
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl">
                     <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -125,7 +125,7 @@ const LiveEnergy = () => {
                   </div>
 
                   {/* Glow border on hover */}
-                  <div 
+                  <div
                     className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                     style={{
                       boxShadow: 'inset 0 0 30px rgba(0, 212, 255, 0.3), 0 0 30px rgba(0, 212, 255, 0.2)',

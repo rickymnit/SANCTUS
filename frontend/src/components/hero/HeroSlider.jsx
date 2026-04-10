@@ -19,11 +19,11 @@ const HeroSlider = () => {
         console.error('Failed to fetch genres:', error);
         // Fallback genres
         setGenres([
-          { id: '1', name: 'D r u m  &  B a s s', tagline: 'Feel the breakbeat energy', hero_image: '/assets/onedeck.jpeg', color: '#ff6b35' },
-          { id: '2', name: 'H    o u s e', tagline: 'Where the groove never stops', hero_image: '/assets/1.jpeg', color: '#f59e0b' },
-          { id: '3', name: 'A f r o', tagline: 'Rhythms from the motherland', hero_image: '/assets/2.jpeg', color: '#10b981' },
-          { id: '4', name: 'T r a n c e', tagline: 'Lose yourself in the sound', hero_image: '/assets/3.jpeg', color: '#8b5cf6' },
-          { id: '5', name: 'T e c h n o', tagline: 'The pulse of the underground', hero_image: '/assets/4.jpeg', color: '#06b6d4' },
+          { id: '1', name: 'D r u m  &  B a s s', tagline: 'Feel the breakbeat energy', hero_image: '/assets/bg-drum-bass.jpeg', color: '#ff6b35' },
+          { id: '2', name: 'H    o u s e', tagline: 'Where the groove never stops', hero_image: '/assets/bg-house.jpeg', color: '#f59e0b' },
+          { id: '3', name: 'A f r o', tagline: 'Rhythms from the motherland', hero_image: '/assets/bg-afro.jpeg', color: '#10b981' },
+          { id: '4', name: 'T r a n c e', tagline: 'Lose yourself in the sound', hero_image: '/assets/bg-afro.jpeg', color: '#8b5cf6' },
+          { id: '5', name: 'T e c h n o', tagline: 'The pulse of the underground', hero_image: '/assets/bg-techno.jpeg', color: '#06b6d4' },
         ]);
       } finally {
         setLoading(false);

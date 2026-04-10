@@ -28,10 +28,10 @@ const GalleryGrid = () => {
         console.error('Failed to fetch gallery:', error);
         // Fallback data
         setImages([
-          { id: '1', url: '/assets/1.jpeg', category: 'live-shows', title: 'Live Performance' },
-          { id: '2', url: '/assets/2.jpeg', category: 'crowd', title: 'Crowd Energy' },
-          { id: '3', url: '/assets/3.jpeg', category: 'studio', title: 'Studio Session' },
-          { id: '4', url: '/assets/4.jpeg', category: 'live-shows', title: 'Event Night' },
+          { id: '1', url: '/assets/profile.jpeg', category: 'live-shows', title: 'Live Performance' },
+          { id: '2', url: '/assets/roomSaturation.jpeg', category: 'crowd', title: 'Crowd Energy' },
+          { id: '3', url: '/assets/Jalmahal.jpeg', category: 'studio', title: 'Studio Session' },
+          { id: '4', url: '/assets/Balcony.jpeg', category: 'live-shows', title: 'Jal Mahal Night' },
         ]);
         setCategories([
           { id: 'live-shows', name: 'Live Shows' },
@@ -103,11 +103,10 @@ const GalleryGrid = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             onClick={() => setActiveCategory('all')}
-            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-              activeCategory === 'all'
-                ? 'bg-primary-500 text-black'
-                : 'bg-dark-700 text-gray-300 hover:bg-dark-600'
-            }`}
+            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === 'all'
+              ? 'bg-primary-500 text-black'
+              : 'bg-dark-700 text-gray-300 hover:bg-dark-600'
+              }`}
           >
             All
           </motion.button>
@@ -118,11 +117,10 @@ const GalleryGrid = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: (index + 1) * 0.05 }}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-primary-500 text-black'
-                  : 'bg-dark-700 text-gray-300 hover:bg-dark-600'
-              }`}
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === category.id
+                ? 'bg-primary-500 text-black'
+                : 'bg-dark-700 text-gray-300 hover:bg-dark-600'
+                }`}
             >
               {category.name}
             </motion.button>
@@ -130,7 +128,7 @@ const GalleryGrid = () => {
         </div>
 
         {/* Image Grid */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         >
@@ -152,7 +150,7 @@ const GalleryGrid = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
-                
+
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-4">

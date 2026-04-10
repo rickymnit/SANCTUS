@@ -7,16 +7,15 @@ import NeonButton from '../ui/NeonButton';
 
 const eventTypes = [
   'Club Night',
-  'Private Party',
-  'Corporate Event',
-  'Wedding',
+  'House Party',
+  'SunDowners',
   'Festival',
   'Other',
 ];
 
 const contactInfo = [
   { icon: Phone, label: 'Phone', value: '+91 9602091364', href: 'tel:+919602091364' },
-  { icon: Mail, label: 'Email', value: 'sanctus.wav@gmail.com', href: 'mailto:sanctus.wav@gmail.com' },
+  { icon: Mail, label: 'Email', value: 'bookings.sanctus@gmail.com', href: 'mailto:bookings.sanctus@gmail.com' },
   { icon: MapPin, label: 'Location', value: 'Jaipur, India', href: '#' },
 ];
 
@@ -61,7 +60,7 @@ const BookingSection = () => {
     <section id="book" className="relative py-32 px-6">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]" />
-      
+
       {/* Glow effects */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[150px]" />
       <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-violet-500/10 rounded-full blur-[150px]" />
@@ -95,7 +94,7 @@ const BookingSection = () => {
               Get in Touch
             </h3>
             <p className="text-white/60 mb-8 leading-relaxed">
-              Whether you're planning a club night, private party, corporate event, or wedding, 
+              Whether you're planning a club night, House party, SunDowners, Festival or any other event,
               I'd love to bring the energy to your occasion. Reach out and let's make it happen.
             </p>
 
@@ -170,11 +169,10 @@ const BookingSection = () => {
                         placeholder="Name"
                       />
                       <label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                          formData.name || focusedField === 'name'
-                            ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
-                            : 'top-4 text-white/40'
-                        }`}
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.name || focusedField === 'name'
+                          ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
+                          : 'top-4 text-white/40'
+                          }`}
                       >
                         Your Name
                       </label>
@@ -194,11 +192,10 @@ const BookingSection = () => {
                         placeholder="Email"
                       />
                       <label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                          formData.email || focusedField === 'email'
-                            ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
-                            : 'top-4 text-white/40'
-                        }`}
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.email || focusedField === 'email'
+                          ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
+                          : 'top-4 text-white/40'
+                          }`}
                       >
                         Email Address
                       </label>
@@ -219,11 +216,10 @@ const BookingSection = () => {
                         placeholder="Phone"
                       />
                       <label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                          formData.phone || focusedField === 'phone'
-                            ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
-                            : 'top-4 text-white/40'
-                        }`}
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.phone || focusedField === 'phone'
+                          ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
+                          : 'top-4 text-white/40'
+                          }`}
                       >
                         Phone Number
                       </label>
@@ -246,11 +242,10 @@ const BookingSection = () => {
                         ))}
                       </select>
                       <label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                          formData.eventType || focusedField === 'eventType'
-                            ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
-                            : 'top-4 text-white/40'
-                        }`}
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.eventType || focusedField === 'eventType'
+                          ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
+                          : 'top-4 text-white/40'
+                          }`}
                       >
                         Event Type
                       </label>
@@ -271,11 +266,10 @@ const BookingSection = () => {
                       placeholder="Message"
                     />
                     <label
-                      className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                        formData.message || focusedField === 'message'
-                          ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
-                          : 'top-4 text-white/40'
-                      }`}
+                      className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.message || focusedField === 'message'
+                        ? '-top-2 text-xs text-cyan-400 bg-[#0a0a0a] px-2'
+                        : 'top-4 text-white/40'
+                        }`}
                     >
                       Tell me about your event...
                     </label>
