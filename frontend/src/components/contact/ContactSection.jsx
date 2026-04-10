@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'sanctus.wav@gmail.com',
-    href: 'mailto:sanctus.wav@gmail.com',
+    value: 'bookings.sanctus@gmail.com',
+    href: 'mailto:bookings.sanctus@gmail.com',
   },
   {
     icon: MapPin,
@@ -86,7 +86,7 @@ const ContactSection = () => {
               Let's Create Something Amazing
             </h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Whether you're planning a club night, private party, corporate event, or wedding, 
+              Whether you're planning a club night, private party, corporate event, or wedding,
               I'd love to bring the energy to your occasion. Fill out the form or reach out directly.
             </p>
 

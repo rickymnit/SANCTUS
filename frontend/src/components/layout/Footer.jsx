@@ -4,7 +4,7 @@ import { Instagram, Youtube, Mail, Phone } from 'lucide-react';
 const socialLinks = [
   { name: 'Instagram', href: 'https://www.instagram.com/sanctus.dj', icon: Instagram },
   { name: 'YouTube', href: 'https://www.youtube.com/@sanctusdj', icon: Youtube },
-  { name: 'Email', href: 'mailto:sanctus.wav@gmail.com', icon: Mail },
+  { name: 'Email', href: 'mailto:bookings.sanctus@gmail.com', icon: Mail },
   { name: 'Phone', href: 'tel:+919602091364', icon: Phone },
 ];
 
