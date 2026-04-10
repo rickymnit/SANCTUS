@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: sanctus-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/app/static/uploads:/app/app/static/uploads
+      - ./assets:/app/assets
+    environment:
+      - DEBUG=false
+      - CORS_ORIGINS=["http://localhost:3000", "http://localhost:80"]
+    restart: unless-stopped
+    networks:
+      - sanctus-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: sanctus-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - sanctus-network
+
+networks:
+  sanctus-network:
+    driver: bridge
+
+volumes:
+  backend-data:
+  backend-uploads:
