@@ -236,7 +236,7 @@ const BookingSection = () => {
                         required
                         className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 transition-colors appearance-none cursor-pointer"
                       >
-                        <option value="" disabled className="bg-[#111]">Select Event Type</option>
+                        <option value="" disabled className="bg-[#111]"></option>
                         {eventTypes.map(type => (
                           <option key={type} value={type} className="bg-[#111]">{type}</option>
                         ))}
